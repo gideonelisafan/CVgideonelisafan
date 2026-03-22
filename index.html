@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify CV</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="cv">
+
+    <div class="header">
+      <div class="overlay"></div>
+      
+      <div class="profile-img-container">
+         <img id="profileImage" class="profile-img" src="https://via.placeholder.com/280" alt="Profile">
+      </div>
+
+      <div class="header-content">
+        <div class="verified-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" fill="#3D91F4"/>
+            <path d="M7.5 12L10.5 15L16.5 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p class="verified">Verified Artist</p>
+        </div>
+        <h1 id="name">Nama</h1>
+        <p id="listeners">0 monthly listeners</p>
+      </div>
+    </div>
+
+    <div class="contact">
+      <a id="linkedin" target="_blank">LINKEDIN</a>
+      <a id="email">E-MAIL</a>
+      <a id="phone">CALL</a>
+    </div>
+
+    <div class="content">
+
+      <div class="left">
+        <div class="card">
+          <h2>Experience</h2>
+          <div id="experience"></div>
+        </div>
+
+        <div class="card">
+          <h2>Achievements</h2>
+          <div id="achievements"></div>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="card">
+          <h2>Education</h2>
+          <div id="education"></div>
+        </div>
+
+        <div class="card">
+          <h2>Tools & Skills</h2>
+          <p id="skills" class="tags-text"></p>
+        </div>
+
+        <div class="card">
+          <h2>Music & Interests</h2>
+          <p id="interests" class="tags-text"></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
