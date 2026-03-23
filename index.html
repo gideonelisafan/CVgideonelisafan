@@ -2,75 +2,83 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Spotify CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Personal CV Dashboard</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="wrapper">
-  <div class="cv">
-
-    <div class="header">
-      <div class="overlay"></div>
-      
-      <div class="profile-img-container">
-         <img id="profileImage" class="profile-img" src="https://via.placeholder.com/280" alt="Profile">
+<div class="cv-container">
+  
+  <header class="header">
+    <div class="profile-frame">
+      <img id="profileImage" class="profile-img" src="https://via.placeholder.com/280x280" alt="Profile Foto">
+    </div>
+    <div class="header-text">
+      <div class="verified-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" fill="#3D91F4"/>
+          <path d="M7.5 12L10.5 15L16.5 9" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="verified">Profil Terverifikasi</span>
       </div>
+      <h1 id="name" class="loading-placeholder-text">Nama...</h1>
+      <p id="listeners">Mengambil data...</p>
+    </div>
+  </header>
 
-      <div class="header-content">
-        <div class="verified-badge">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="10" fill="#3D91F4"/>
-            <path d="M7.5 12L10.5 15L16.5 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <p class="verified">Verified Artist</p>
-        </div>
-        <h1 id="name">Nama</h1>
-        <p id="listeners">0 monthly listeners</p>
-      </div>
+  <section class="action-bar">
+    <a id="linkedin" target="_blank" class="btn btn-primary">LINKEDIN</a>
+    <a id="email" class="btn btn-secondary">E-MAIL</a>
+    <a id="phone" class="btn btn-secondary">CALL</a>
+  </section>
+
+  <main class="content-grid">
+    
+    <div class="column-left">
+      <section class="content-block hover-effect">
+        <h2>Experience</h2>
+        <div id="experience" class="list-container skeleton-loading">
+          </div>
+      </section>
+
+      <section class="content-block hover-effect">
+        <h2>Highlighted Projects</h2>
+        <div id="projects" class="list-container skeleton-loading">
+          </div>
+      </section>
+
+      <section class="content-block hover-effect">
+        <h2>Achievements</h2>
+        <div id="achievements" class="list-container skeleton-loading">
+          </div>
+      </section>
     </div>
 
-    <div class="contact">
-      <a id="linkedin" target="_blank">LINKEDIN</a>
-      <a id="email">E-MAIL</a>
-      <a id="phone">CALL</a>
+    <div class="column-right">
+      <section class="content-block hover-effect">
+        <h2>Education</h2>
+        <div id="education" class="list-container skeleton-loading">
+          </div>
+      </section>
+
+      <section class="content-block">
+        <h2>Tools & Skills</h2>
+        <p id="skills" class="tags-text loading-placeholder-text">Mengambil data keahlian...</p>
+      </section>
+
+      <section class="content-block">
+        <h2>Music & Interests</h2>
+        <p id="interests" class="tags-text loading-placeholder-text">Mengambil data minat...</p>
+      </section>
     </div>
 
-    <div class="content">
+  </main>
 
-      <div class="left">
-        <div class="card">
-          <h2>Experience</h2>
-          <div id="experience"></div>
-        </div>
+  <footer class="footer">
+    <p>&copy; 2024 Spotify CV Style. Built dynamically with Google Sheets.</p>
+  </footer>
 
-        <div class="card">
-          <h2>Achievements</h2>
-          <div id="achievements"></div>
-        </div>
-      </div>
-
-      <div class="right">
-        <div class="card">
-          <h2>Education</h2>
-          <div id="education"></div>
-        </div>
-
-        <div class="card">
-          <h2>Tools & Skills</h2>
-          <p id="skills" class="tags-text"></p>
-        </div>
-
-        <div class="card">
-          <h2>Music & Interests</h2>
-          <p id="interests" class="tags-text"></p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
 </div>
 
 <script src="script.js"></script>
